@@ -34,7 +34,7 @@ Visual Studio Code.
 
 #### **3.1.2** **实验设计**
 
-<img src="../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image001.png" alt="img" style="zoom:50%;" />
+<img src="image engineering.assets/clip_image001.png" alt="img" style="zoom:50%;" />
 
 #### **3.1.3**  **算法实现**
 
@@ -141,7 +141,7 @@ RGB空间由三个通道表示一幅图像，分别为红色(R)，绿色(G)和�
 
 #### **3.2.2 实验设计**
 
-<img src="../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image011.png" alt="img" style="zoom:50%;" />
+<img src="image engineering.assets/clip_image011.png" alt="img" style="zoom:50%;" />
 
  
 
@@ -226,7 +226,7 @@ RGB空间由三个通道表示一幅图像，分别为红色(R)，绿色(G)和�
 
 #### **3.2.4 结果分析**
 
-<img src="../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image012.png" alt="img" style="zoom:50%;" />
+<img src="image engineering.assets/clip_image012.png" alt="img" style="zoom:50%;" />
 
 米粒图像的灰度直方图
 
@@ -630,7 +630,7 @@ Kernel Correlation Filter （KCF），即核相关滤波算法。KCF算法使用
 
 video1.avi 目标离开画面：
 
-<img src="../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image025.png" alt="img" style="zoom:50%;" />
+<img src="image engineering.assets/clip_image025.png" alt="img" style="zoom:50%;" />
 
 
 
