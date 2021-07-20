@@ -1,43 +1,45 @@
 # Image-Engineering-Course-Project
 
+**目录：**
+
 - [Image-Engineering-Course-Project](#image-engineering-course-project)
-  - [1. Experiment purpose](#1-experiment-purpose)
-  - [2.  Experiment environment](#2--experiment-environment)
-  - [3.Experiment content](#3experiment-content)
+  - [1. 实验目的](#1-实验目的)
+  - [2. 实验环境](#2-实验环境)
+  - [3. 实验内容](#3-实验内容)
     - [3.1](#31)
-      - [3.1.1 Experiment requirements](#311-experiment-requirements)
-      - [3.1.2 Experiment design](#312-experiment-design)
-      - [3.1.3  Algorithm Implementation](#313--algorithm-implementation)
-      - [3.1.4  Analysis of results](#314--analysis-of-results)
+      - [3.1.1 实验要求](#311-实验要求)
+      - [3.1.2 实验设计](#312-实验设计)
+      - [3.1.3  算法实现](#313--算法实现)
+      - [3.1.4  结果分析](#314--结果分析)
     - [3.2](#32)
-      - [3.2.1 Experiment requirements](#321-experiment-requirements)
-      - [3.2.2 Experiment design](#322-experiment-design)
-      - [3.2.3 Algorithm Implementation](#323-algorithm-implementation)
-      - [3.2.4 Analysis of results](#324-analysis-of-results)
+      - [3.2.1 实验要求](#321-实验要求)
+      - [3.2.2 实验设计](#322-实验设计)
+      - [3.2.3 算法实现](#323-算法实现)
+      - [3.2.4 结果分析](#324-结果分析)
     - [3.3](#33)
-      - [3.3.1 Experimental requirements](#331-experimental-requirements)
-      - [3.3.2  Experimental design](#332--experimental-design)
-        - [3.3.2.1 Motion target detection](#3321-motion-target-detection)
-        - [3.3.2.2 Multi-target tracking](#3322-multi-target-tracking)
-      - [3.3.3 Algorithm Implementation](#333-algorithm-implementation)
-        - [3.3.3.1  Motion Target Detection](#3331--motion-target-detection)
-        - [3.3.3.2 Multi-target tracking](#3332-multi-target-tracking)
-      - [3.3.4 Analysis of results](#334-analysis-of-results)
-        - [3.3.4.1  Motion target detection](#3341--motion-target-detection)
-      - [3.4.2 Multi-target tracking](#342-multi-target-tracking)
-  - [4    Experimental conclusion](#4----experimental-conclusion)
-  - [5    Appendix](#5----appendix)
-    - [Appendix A: area pixel size](#appendix-a-area-pixel-size)
+      - [3.3.1 实验要求](#331-实验要求)
+      - [3.3.2 实验设计](#332-实验设计)
+        - [3.3.2.1 运动目标检测](#3321-运动目标检测)
+        - [3.3.2.2 多目标跟踪](#3322-多目标跟踪)
+      - [3.3.3 算法实现](#333-算法实现)
+        - [3.3.3.1 运动目标检测](#3331-运动目标检测)
+        - [3.3.3.2 多目标跟踪](#3332-多目标跟踪)
+      - [3.3.4 结果分析](#334-结果分析)
+        - [3.3.4.1  运动目标检测](#3341--运动目标检测)
+      - [3.4.2 多目标跟踪](#342-多目标跟踪)
+  - [4    实验结论](#4----实验结论)
+  - [5    附录](#5----附录)
+    - [**附录A：区域像素大小**](#附录a区域像素大小)
 
-## 1. Experiment purpose
+## 1. 实验目的
 
-1. To learn the OpenCV library of Python and understand the principles and basic operations of image processing；
+1. 学习Python的OpenCV库，了解图像处理的原理和基本操作；
 
-2. To learn and use algorithms for image processing (e.g., Otsu algorithm) to solve practical problems；
+2. 学习并使用图像处理的算法（如大津算法）解决实际问题；
 
-3. To implement target detection and trajectory tracking of images; to compare and analyze the effectiveness and applicability of different algorithms.
+3. 实现图像目标检测和轨迹跟踪，对不同算法的效果和适用范围进行对比分析。
 
-## 2.  Experiment environment
+## 2. 实验环境
 
 1. Anaconda;
 
@@ -45,27 +47,27 @@
 
 3. Visual Studio Code. 
 
-## 3.Experiment content
+## 3. 实验内容
 
 ### 3.1
 
-#### 3.1.1 Experiment requirements
+#### 3.1.1 实验要求
 
-1. In the development environment, select a representative image;
+1. 在开发环境下，自行选择有代表性的图像; 
 
-2. Display the corresponding B, G and R channels;
+2. 显示对应的 B、G、R 通道; 
 
-3. Convert the original image into HSV space representation and display the corresponding components;
+3. 将原有图像转化为 HSV 空间表达，并显示对应分量; 
 
-4. Analyze the RGB and HSV component display images separately;
+4. 分别对 RGB 和 HSV 分量显示图像进行分析;
 
-5. (Optional) Use pyplot in matplotlib, apply the plot function to display the image to see if it can be displayed properly, and further use this function to divide the image into 2*4 sub-windows to display the original image and different components in different sub-windows.
+5. (可选)使用 matplotlib 的 pyplot, 并应用 plot 函数显示图像，看是否能正常显示进一步使用该函数将图像分成 2*4 个子窗口，分别在不同子窗口中显示 原始图像及不同分量
 
-#### 3.1.2 Experiment design
+#### 3.1.2 实验设计
 
 <img src="image engineering.assets/clip_image001.png" alt="img" style="zoom:50%;" />
 
-#### 3.1.3  Algorithm Implementation
+#### 3.1.3  算法实现
 
 ```python
 1.	import cv2 as cv
@@ -128,7 +130,7 @@
 
  
 
-#### 3.1.4  Analysis of results
+#### 3.1.4  结果分析
 
 | <img src="image engineering.assets/clip_image001.jpg" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image002-6658964.jpg" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image003-6658964.jpg" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image004-6658964.jpg" alt="img" style="zoom:50%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -136,45 +138,45 @@
 
 
 
-Use `cv.imshow` to plot a graph, the first line from left to right is the original image/Blue/Green/Red channel, the second line from left to right is the hsv image/Hue/Saturation/Value channel
+使用cv.imshow作图，第一行从左到右为原图/Blue/Green/Red通道，第二行从左到右为hsv图像/Hue/Saturation/Value通道
 
 ![img](../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image010.png)
 
-Use `plt.imshow` to plot a graph.
+使用plt.imshow绘图。
 
-This experiment mainly uses two color spaces, RGB and HSV.
+这个实验主要用到了RGB和HSV两个颜色空间。
 
-The RGB space consists of three channels representing an image: red (R), green (G) and blue (B). Different combinations of these three colors can form almost all other colors, and thus this representation is well suited for the display of images. Intuitively, in a single RGB channel image, the shade is related to the color value of this pixel.
+RGB空间由三个通道表示一幅图像，分别为红色(R)，绿色(G)和蓝色(B)。这三种颜色的不同组合可以形成几乎所有的其他颜色，这种表示方法很适合图像的显示。直观地看，在绘制的RGB单通道图像中，深浅与这个像素的颜色值相关。
 
-Compared with the RGB space, the HSV color space is more closer to people's perceptual experience of colors. It is very intuitive in expressing the hue, vividness and lightness of colors, and facilitates the comparison among colors. Intuitively, in a single HSV channel image, the shade is related to the hue, saturation, and brightness of this pixel.
+相比于RGB空间，HSV 颜色空间更接近人们对彩色的感知经验。非常直观地表达颜色的色调、鲜艳程度和明暗程度，方便进行颜色的对比。直观地看，在绘制的HSV单通道图像中，深浅与这个像素的色调、饱和度、明度相关。
 
  
 
-The comparison shows a number of differences between cv and matplotlib in the processing and display of images.
+对比可以看出cv和matplotlib在处理和显示图片有很多区别：
 
-1. When reading in, `cv.imread` reads in BGR mode while `plt.imread`reads in RGB mode. The two have different channel sequences. When drawing images using plt and cv, after the channel order is swapped, you can see that the images drawn are identical.
+1. 读入时，`cv.imread`读入是BGR模式，而`plt.imread`读入是RGB模式，两者的通道顺序不同。使用plt和cv绘制图像时，经过通道顺序的对换，可以看出绘制的图像完全一致。
 
-2. When displaying images of separate channels, `cv.imshow` defaults to black and white, while `plt.imshow` defaults to yellow and green.
+2. 当显示单独通道的图像时，`cv.imshow`默认为黑白图，而`plt.imshow`默认为黄绿图。
 
  
 
 ### 3.2 
 
-#### 3.2.1 Experiment requirements
+#### 3.2.1 实验要求
 
-1. In the development environment, display the grayscale histogram of the rice grain image;
-2. Use Otsu or other methods to perform threshold segmentation and get the binarization result after segmentation;
-3. Apply the `findContours` function to the result and get the contours of all the rice grains;
-4.  Draw the minimum enclosing rectangle for each rice grain, further calculate the variance and perform statistics;
-5.  Analyze the segmentation and statistical results. 
+1. 在开发环境下，显示米粒图像的灰度直方图;
+2. 使用大津或其它方法进行阈值分割，得到分割后的二值化结果;
+3. 对结果应用 `findContours `函数，得到所有米粒对应的轮廓;
+4.  画出每一米粒对应的最小包围矩形，进一步计算方差并进行统计;
+5.  对分割及统计结果进行分析。 
 
-#### 3.2.2 Experiment design
+#### 3.2.2 实验设计
 
 <img src="image engineering.assets/clip_image011.png" alt="img" style="zoom:50%;" />
 
  
 
-#### 3.2.3 Algorithm Implementation
+#### 3.2.3 算法实现
 
 ```python
 1	import cv2 as cv
@@ -253,17 +255,17 @@ The comparison shows a number of differences between cv and matplotlib in the pr
 
  
 
-#### 3.2.4 Analysis of results
+#### 3.2.4 结果分析
 
 <img src="image engineering.assets/clip_image012.png" alt="img" style="zoom:50%;" />
 
-Gray histogram of rice image
+米粒图像的灰度直方图
 
 | <img src="image engineering.assets/clip_image013.jpg" alt="img" /> | <img src="image engineering.assets/clip_image014.jpg" alt="img" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                             源图                             |                           阈值化图                           |
 
-Statistics of rice grain results：
+对米粒结果的统计：
 
 | Max area  | 383.5   |
 | --------- | ------- |
@@ -272,11 +274,11 @@ Statistics of rice grain results：
 | Threshold | 129.0   |
 | 米粒数量  | 93      |
 
-The detailed results of the filtered region segmentation pixel statistics are shown in Appendix A.
+经过筛选的区域分割像素统计的详细结果见附录A。
 
-Observation of the grayscale histogram reveals that there are significant differences in grayscale between the target and background regions, or between different target regions. Observing the image, we can see that the Otsu algorithm divides the image into two parts, background and foreground, based on the grayscale characteristics of the image. On the source map, the background part is framed with a closed red line square and labeled sequentially, in total of 93 rice grains (the accuracy is high). The background was also clearly marked in the thresholding map. The variance was further calculated to be 35.67. The number of rice grains falling within the 2.5σ range was 30.
+观察灰度直方图发现，目标区和背景区之间或者不同目标区之间，灰度存在明显差异。观察图像可知，大津算法按图像的灰度特性,将图像分成背景和前景两部分。在源图上，将背景部分用闭合的红线框上并依次标号，总计93个米粒，正确率很高。阈值化图中也将背景清晰地标志出来了。进一步计算方差为35.67。落在 2.5σ范围内的米粒数量为30个。
 
-However, it was found that there were still some rice grains that were not marked on the rice grain map. I first tried to adjust the contrast reading and brightness of the rice grain image, but failed to improve the labeling success rate; then I adjusted the threshold using the method of `cv.THRESH_BINARY`, but still found that a threshold of 129 was the best result. This is because OpenCV's Otsu algorithm is based on a global threshold segmentation algorithm, which is highly susceptible to the interference of uneven lighting. As a result, the image foreground pixels and background pixels are segmented unreasonably, which leads to the failure of distinguishing the darker rice grains for the rice grain map. A better approach is to implement a local Otsu algorithm. However, OpenCV does not have a function to package a good local Otsu algorithm. The following is a Python implementation of the local Otsu algorithm. The main idea is to use a local threshold segmentation method, where each column is localized, and each column is subjected to the Otsu algorithm once to find the column threshold and so on, until all columns are traversed. The code implementation is as follows.
+然而，发现米粒图上仍然有一些米粒没有被标记出来。尝试通过调整米粒图像的对比读和亮度，仍然无法提高标记成功率；使用`cv.THRESH_BINARY`的方法调整阈值，仍然发现129的阈值是最佳的结果。这是因为OpenCV的大津算法是基于全局的阈值分割算法，极易受到光照不均的干扰，使图像前景像素与背景像素分割不合理，针对米粒图无法区分出较暗的米粒。更好的方法是实现局部的大津算法。但是OpenCV没有封装好的局部大津算法的函数。下面是局部大津算法的一种Python实现，主要思路是采用局部阈值分割的方法，以每列为局部，将每列进行一次大津算法，求出列阈值，以此类推，直至遍历完所有的列。代码实现如下：
 
 ```python
 1.	import cv2 as cv
@@ -332,69 +334,74 @@ However, it was found that there were still some rice grains that were not marke
 
  
 
-The edge results obtained by the local Otsu method are following.
+局部大津法得到的边缘结果为：
 
 | ![img](image engineering.assets/clip_image014.jpg) | ![img](image engineering.assets/clip_image015.jpg) |
 | :------------------------------------------------: | :------------------------------------------------: |
-|   Threshold graph obtained by global Otsu method   |   Threshold graph obtained by local Otsu method    |
+|              全局大津法得到的阈值化图              |              局部大津法得到的阈值化图              |
 
-It can be seen that some rice grains with lower brightness are also recognized. If we want to achieve an even better recognition, we need to perform finer-grained segmentation and perform Otsu method on small areas.
+可以看出，有些亮度较低的米粒也被识别出来了。如果想实现更好的识别度，需要进行更细粒度的划分并在小区域上进行大津法。
 
 
 
 ### 3.3 
 
-#### 3.3.1 Experimental requirements
+#### 3.3.1 实验要求
 
-1. System input: the given video (with the target); System output: the detected target frame and the target motion trajectory;
+1. 系统输入:给定视频(含有相关目标); 系统输出:检测的目标框及目标运动轨迹; 
+2.  首先在“viplane”视频上进行实验;进一步在“Cap02t3”、“999”和 “video1”视频上进行实验。 
 
-2. The experiment was first conducted on the "viplane" video and then conducted on the "Cap02t3", "999" and " video1" video.
+提示: 
 
-   
+1. 运动目标检测可利用 OpenCV 提供的背景提取算法; 
 
-#### 3.3.2  Experimental design
+2. 运动目标跟踪可利用 OpenCV 提供的多目标跟踪方法，如 KCF 等;
 
-##### 3.3.2.1 Motion target detection
+3. (可选)为得到更好效果，可尝试利用深度学习进行目标检测; 
 
-A background extraction algorithm is used by selecting a picture as the background and then compare it with every frame.
+4. (可选)为得到更好的多目标跟踪效果，可尝试利用 SORT、SiamRPN 等方法。 
 
+#### 3.3.2 实验设计
 
+##### 3.3.2.1 运动目标检测
 
-##### 3.3.2.2 Multi-target tracking
+使用了背景提取算法，进行将一幅图作为背景，然后和每一帧对比。
 
-**（1）Multi-target tracking using optical flow method (automatic target selection for tracking)**
+##### 3.3.2.2 多目标跟踪
 
-The optical flow method is a very common method for marking the trajectories of moving objects in video, and it is easy to implement optical flow in OpenCV. Optical flow expresses changes in the image and can be used by the observer to determine the motion of a target since it contains information about the target's motion. `cv2.calcOpticalFlowPyrLK` function computes the optical flow of a sparse feature set using the iterative Lucas-Kanade method in the pyramid.
+**（1）使用光流法实现多目标跟踪（自动选择目标跟踪）**
 
-Implementation principle：
+光流法是进行视频中运动对象轨迹标记的一种很常用的方法，在OpenCV中实现光流也很容易。光流表达了图像的变化，由于它包含了目标运动的信息，因此可被观察者用来确定目标的运动情况。`cv2.calcOpticalFlowPyrLK`函数计算一个稀疏特征集的光流，使用金字塔中的迭代 Lucas-Kanade 方法。
 
-First the first frame is selected, the Shi-Tomasi corner points are detected in the first image frame, and then the LK algorithm is used to iteratively track these feature points. The iteration is done by continuously passing the feature points of the previous frame and the current frame into `cv2.calcOpticalFlowPyrLK`. The function returns the points of the current frame with the status 1 or 0. If a point from the previous frame is found in the current frame, then the status of the point is 1, otherwise it is 0.
+实现原理：
 
-Implementation flow:
+首先选取第一帧，在第一帧图像中检测Shi-Tomasi角点，然后使用LK算法来迭代的跟踪这些特征点。迭代的方式就是不断向`cv2.calcOpticalFlowPyrLK`中传入上一帧图片的特征点以及当前帧的图片。函数会返回当前帧的点，这些点带有状态1或者0，如果在当前帧找到了上一帧中的点，那么这个点的状态就是1，否则就是0。
 
-1. Load the video;
+实现流程：
 
-2. Call the `GoodFeaturesToTrack` function to find points of interest (keypoints);
+1. 加载视频；
 
-3. Call the `CalcOpticalFlowPyrLK` function to calculate the movement of the points of interest in the two frames of the image.
+2. 调用 `GoodFeaturesToTrack `函数寻找兴趣点（关键点）；
 
-4. Delete the unmoved points of interest;
+3. 调用 `CalcOpticalFlowPyrLK` 函数计算出两帧图像中兴趣点的移动情况；
 
-5. Draw a line segment between the two moving points.
+4. 删除未移动的兴趣点；
 
- 
-
-**（2）Multi-target tracking using KCF algorithm (can track specified multiple targets)**
-
-Kernel Correlation Filter (KCF), i.e., the kernel correlation filter algorithm, uses a circular matrix of the region around the target to collect positive and negative samples, uses ridge regression to train the target detector, and successfully uses the diagonalizable nature of the circular matrix in Fourier space to transform the operation of the matrix into the Hadamad product of vectors, i.e., the dot product of elements. This greatly reduces the amount of operations and increases the speed of operations, allowing the algorithm to meet real-time requirements. The ridge regression in linear space is mapped to nonlinear space by kernel functions, and the same can be simplified by solving a pairwise problem and certain common constraints in nonlinear space using circular matrix Fourier space diagonalization. A way to incorporate multichannel data into this algorithm is given.
-
-This is achieved by directly creating a KCF algorithm tracker using the `TrackerKCF_create()` function in the OpenCV library.
+5. 在两次移动的点之间绘制一条线段。
 
  
 
-#### 3.3.3 Algorithm Implementation
+**（2）使用KCF算法实现多目标跟踪（可以跟踪指定的多目标）**
 
-##### 3.3.3.1  Motion Target Detection
+Kernel Correlation Filter （KCF），即核相关滤波算法。KCF算法使用目标周围区域的循环矩阵采集正负样本，利用脊回归训练目标检测器，并成功的利用循环矩阵在傅里叶空间可对角化的性质将矩阵的运算转化为向量的Hadamad积，即元素的点乘，大大降低了运算量，提高了运算速度，使算法满足实时性要求。将线性空间的脊回归通过核函数映射到非线性空间，在非线性空间通过求解一个对偶问题和某些常见的约束，同样的可以使用循环矩阵傅里叶空间对角化简化计算。给出了一种将多通道数据融入该算法的途径。
+
+直接使用OpenCV库中的`TrackerKCF_create()`函数创建KCF算法跟踪器，即可实现。
+
+ 
+
+#### 3.3.3 算法实现
+
+##### 3.3.3.1 运动目标检测
 
 ```python
 1.	import cv2
@@ -463,9 +470,9 @@ This is achieved by directly creating a KCF algorithm tracker using the `Tracker
 
  
 
-##### 3.3.3.2 Multi-target tracking
+##### 3.3.3.2 多目标跟踪
 
-**（1）Multi-target tracking using optical flow method** 
+**（1）使用光流法实现多目标跟踪** 
 
 ```python
 1.	import numpy as np
@@ -524,7 +531,7 @@ This is achieved by directly creating a KCF algorithm tracker using the `Tracker
 
 
 
-**（2）Multi-target tracking using KCF algorithm**
+**（2）使用KCF算法实现多目标跟踪**
 
 ```python
 1.	import cv2
@@ -618,91 +625,87 @@ This is achieved by directly creating a KCF algorithm tracker using the `Tracker
 
 
 
-#### 3.3.4 Analysis of results
+#### 3.3.4 结果分析
 
-##### 3.3.4.1  Motion target detection
+##### 3.3.4.1  运动目标检测
 
-**The screenshot results of the video are：**
+**视频的截图结果为：**
 
 | <img src="image engineering.assets/clip_image016.png" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image017.png" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image018.png" alt="img" style="zoom:50%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                           999.mp4                            |                          video1.avi                          |                         Cap02t3.avi                          |
 
-The video target detection based on the background extraction algorithm can detect the scenes where the background was not available before. However, the background selected at the beginning may cause errors with the change of lighting. This method is more suitable for places where the lighting conditions are stable. Moreover, this method can only detect the different points between frames and cannot achieve the tracking of specific targets.
+可以发现，采用背景提取算法的视频目标检测可以检测之前背景没有的景象。但是一开始存入的背景可能随光照变化而造成错误，可以用在光照环境稳定的地方。而且这种检测方法只能检测出帧之间的不同点，无法实现对特定目标的跟踪。
 
  
 
-#### 3.4.2 Multi-target tracking
+#### 3.4.2 多目标跟踪
 
-**（1）Multi-target tracking using optical flow method**
+**（1）使用光流法实现多目标跟踪**
 
 | <img src="image engineering.assets/clip_image019.png" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image020.png" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image021.png" alt="img" style="zoom:50%;" /> |
 | :----------------------------------------------------------: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                           999.mp4                            | viplane.avi                                                  | Cap02t3.avi                                                  |
 
-It can be found that the optical flow method automatically detects the feature points with obvious motion and tracks the trajectories of multiple feature points at the same time, which is very effective. This method also achieves good detection of new feature points in the video. However, the optical flow method cannot track specific targets, and the feature points it detected are not always meaningful in practice.
+可以发现，光流法将存在明显运动的特征点自动检测出来，并同时跟踪多个特征点的轨迹，效果很好。这种方法对视频中新出现的特征点也能做到很好的检测。但是，光流法无法对特定的目标进行跟踪，其检测的特征点也不一定具有实际意义。
 
  
 
-**（2）Multi target tracking using KCF algorithm**
+**（2）使用KCF算法实现多目标跟踪**
 
 | <img src="image engineering.assets/clip_image022.png" alt="img" style="zoom:50%;" /> | <img src="image engineering.assets/clip_image023.png" alt="img"  /> | <img src="image engineering.assets/clip_image024.png" alt="img" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                           999.mp4                            |                         Cap02t3.avi                          |                         viplane.avi                          |
 
-Here I used the mask and the tracker that comes with Opencv-contrib-python to achieve the simultaneous tracking of two specific targets and plot their movement trajectories. Overall it works well. The tracking of more targets can be done by adding more trackers in the code. When the target leaves the screen, "Tracking failure detected" will be displayed in the video, as shown in the figure.
+本文使用掩层和Opencv-contrib-python中自带的跟踪器，实现了两个特定目标的同时跟踪并绘制其移动轨迹。跟踪效果良好。如果想实现更多目标的跟踪，只需要在代码中增加更多的跟踪器即可。当目标离开画面时，视频中会显示"Tracking failure detected"字样，如图所示。
 
-video1.avi target leaves the screen：
+video1.avi 目标离开画面：
 
 <img src="image engineering.assets/clip_image025.png" alt="img" style="zoom:50%;" />
 
 
 
-## 4    Experimental conclusion
+## 4    实验结论
 
-(1) Implemented the basic operations of image processing; understood the color space, displayed the corresponding B, G, and R channels, converted the original image into HSV space representation, and displayed the corresponding components; compared the differences of image display between pyplot and cv2 using matplotlib.
+（1）  实现了图像处理的基本操作，了解了颜色空间，分别显示对应的 B、G、R 通道以及将原有图像转化为 HSV 空间表达，并显示对应分量; 对比了使用 matplotlib 的 pyplot和cv2对图像显示的区别。
 
- 
+（2）  使用并改进了全局大津算法，画出了米粒图的灰度直方图并进行分析，实现了对米粒图像的识别和统计。成功画出米粒对应的最小包围矩形。
 
-(2) Used and improved the global Otsu algorithm; plotted and analyzed the gray histogram of the rice grain image, and achieved the recognition and counting of the rice grains; plotted the minimum enclosing rectangle corresponding to the rice grains
-
- 
-
-(3) Used the background extraction algorithm, optical flow method and KCF algorithm for target detection and target trajectory tracking for different videos, respectively. Conducted a comparative analysis on the effect and applicability range, and made a series of improvements on the algorithm.
+（3）  分别使用了背景提取算法、光流法和KCF算法对不同视频进行目标检测和目标轨迹跟踪。对效果和适用范围进行了对比分析，对算法应用进行一系列改进。
 
  
 
-## 5    Appendix
+## 5    附录
 
-### Appendix A: area pixel size
+### **附录A：区域像素大小**
 
-| blob       | 97    | 96    | 95    | 93    | 92    | 91    | 90    |
-| :--------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| pixel size | 49    | 113.5 | 166   | 12    | 104.5 | 166.5 | 36    |
-| blob       | 96    | 95    | 93    | 92    | 91    | 90    | 89    |
-| pixel size | 113.5 | 166   | 12    | 104.5 | 166.5 | 36    | 76    |
-| blob       | 95    | 93    | 92    | 91    | 90    | 89    | 88    |
-| pixel size | 166   | 12    | 104.5 | 166.5 | 36    | 76    | 101   |
-| blob       | 93    | 92    | 91    | 90    | 89    | 88    | 87    |
-| pixel size | 12    | 104.5 | 166.5 | 36    | 76    | 101   | 178   |
-| blob       | 92    | 91    | 90    | 89    | 88    | 87    | 86    |
-| pixel size | 104.5 | 166.5 | 36    | 76    | 101   | 178   | 123   |
-| blob       | 91    | 90    | 89    | 88    | 87    | 86    | 85    |
-| pixel size | 166.5 | 36    | 76    | 101   | 178   | 123   | 160   |
-| blob       | 90    | 89    | 88    | 87    | 86    | 85    | 84    |
-| pixel size | 36    | 76    | 101   | 178   | 123   | 160   | 168.5 |
-| blob       | 89    | 88    | 87    | 86    | 85    | 84    | 83    |
-| pixel size | 76    | 101   | 178   | 123   | 160   | 168.5 | 193.5 |
-| blob       | 88    | 87    | 86    | 85    | 84    | 83    | 82    |
-| pixel size | 101   | 178   | 123   | 160   | 168.5 | 193.5 | 168   |
-| blob       | 87    | 86    | 85    | 84    | 83    | 82    | 81    |
-| pixel size | 178   | 123   | 160   | 168.5 | 193.5 | 168   | 383.5 |
-| blob       | 86    | 85    | 84    | 83    | 82    | 81    | 80    |
-| pixel size | 123   | 160   | 168.5 | 193.5 | 168   | 383.5 | 122   |
-| blob       | 85    | 84    | 83    | 82    | 81    | 80    | 79    |
-| pixel size | 160   | 168.5 | 193.5 | 168   | 383.5 | 122   | 356.5 |
-| blob       | 84    | 83    | 82    | 81    | 80    | 79    | 78    |
-| pixel size | 168.5 | 193.5 | 168   | 383.5 | 122   | 356.5 | 143.5 |
+| blob   | 97    | 96    | 95    | 93    | 92    | 91    | 90    |
+| :----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| 像素数 | 49    | 113.5 | 166   | 12    | 104.5 | 166.5 | 36    |
+| blob   | 96    | 95    | 93    | 92    | 91    | 90    | 89    |
+| 像素数 | 113.5 | 166   | 12    | 104.5 | 166.5 | 36    | 76    |
+| blob   | 95    | 93    | 92    | 91    | 90    | 89    | 88    |
+| 像素数 | 166   | 12    | 104.5 | 166.5 | 36    | 76    | 101   |
+| blob   | 93    | 92    | 91    | 90    | 89    | 88    | 87    |
+| 像素数 | 12    | 104.5 | 166.5 | 36    | 76    | 101   | 178   |
+| blob   | 92    | 91    | 90    | 89    | 88    | 87    | 86    |
+| 像素数 | 104.5 | 166.5 | 36    | 76    | 101   | 178   | 123   |
+| blob   | 91    | 90    | 89    | 88    | 87    | 86    | 85    |
+| 像素数 | 166.5 | 36    | 76    | 101   | 178   | 123   | 160   |
+| blob   | 90    | 89    | 88    | 87    | 86    | 85    | 84    |
+| 像素数 | 36    | 76    | 101   | 178   | 123   | 160   | 168.5 |
+| blob   | 89    | 88    | 87    | 86    | 85    | 84    | 83    |
+| 像素数 | 76    | 101   | 178   | 123   | 160   | 168.5 | 193.5 |
+| blob   | 88    | 87    | 86    | 85    | 84    | 83    | 82    |
+| 像素数 | 101   | 178   | 123   | 160   | 168.5 | 193.5 | 168   |
+| blob   | 87    | 86    | 85    | 84    | 83    | 82    | 81    |
+| 像素数 | 178   | 123   | 160   | 168.5 | 193.5 | 168   | 383.5 |
+| blob   | 86    | 85    | 84    | 83    | 82    | 81    | 80    |
+| 像素数 | 123   | 160   | 168.5 | 193.5 | 168   | 383.5 | 122   |
+| blob   | 85    | 84    | 83    | 82    | 81    | 80    | 79    |
+| 像素数 | 160   | 168.5 | 193.5 | 168   | 383.5 | 122   | 356.5 |
+| blob   | 84    | 83    | 82    | 81    | 80    | 79    | 78    |
+| 像素数 | 168.5 | 193.5 | 168   | 383.5 | 122   | 356.5 | 143.5 |
 
  
 
