@@ -136,7 +136,7 @@
 
 
 
-Use `cv.imshow` to plot a graph, the first line from left to right is the original image/Blue/Green/Red channel, the second line from left to right is the hsv image/Hue/Saturation/Value channel
+Use `cv.imshow` to plot a graph, the first line from left to right is the original image/Blue/Green/Red channel, the second line from left to right is the hsv image/Hue/Saturation/Value channel.
 
 ![img](../../小铭不熬夜/作业和笔记/图像工程/image engineering.assets/clip_image010.png)
 
@@ -261,7 +261,7 @@ Gray histogram of rice image
 
 | <img src="image engineering.assets/clip_image013.jpg" alt="img" /> | <img src="image engineering.assets/clip_image014.jpg" alt="img" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|                             源图                             |                           阈值化图                           |
+|                         Source graph                         |                      Thresholding graph                      |
 
 Statistics of rice grain results：
 
@@ -652,7 +652,7 @@ It can be found that the optical flow method automatically detects the feature p
 
 Here I used the mask and the tracker that comes with Opencv-contrib-python to achieve the simultaneous tracking of two specific targets and plot their movement trajectories. Overall it works well. The tracking of more targets can be done by adding more trackers in the code. When the target leaves the screen, "Tracking failure detected" will be displayed in the video, as shown in the figure.
 
-video1.avi target leaves the screen：
+Target leaves the screen in video1.avi：
 
 <img src="image engineering.assets/clip_image025.png" alt="img" style="zoom:50%;" />
 
